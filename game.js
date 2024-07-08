@@ -3,6 +3,7 @@ var gamePattern = []
 var userClickedPattern = []
 var gameStarted = false
 var level = 0
+var currentLevel = 0
 
 $(".btn").click(function() { 
     var userChosenColour =  $(this).attr("id")
@@ -10,6 +11,7 @@ $(".btn").click(function() {
     
     playSound(userChosenColour)
     animatePress(userChosenColour)
+    checkAnswer(userClickedPattern.length - 1)
 });
 $(document).keydown(function(){
     if(!gameStarted){
@@ -18,6 +20,7 @@ $(document).keydown(function(){
         gameStarted = true
     }
 })
+
 
 function animatePress(currentColour){
     $("#" + currentColour).addClass("pressed")
@@ -44,6 +47,27 @@ function nextSequence() {
     
     playSound(randomChosenColour)
 }
+function checkAnswer(currentLevel){
+    if(userClickedPattern[currentLevel] === gamePattern[currentLevel]){
+        console.log("Success")
+
+        if(userClickedPattern.length === gamePattern.length){
+            setTimeout(function(){
+                nextSequence()
+            }, 1000)
+        }
+    }else{
+        $("h1").text("Game Over, Press Any Key to Restart")
+        $("body").addClass("game-over")
+        setTimeout(function(){
+            $("body").removeClass("game-over")
+        },200)
+        var audio = new Audio("sounds/wrong.mp3")
+        audio.play()
+    }
+}
+
+
 
 
 
