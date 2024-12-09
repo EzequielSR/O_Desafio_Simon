@@ -27,4 +27,4 @@ Este projeto foi desenvolvido com:
 3. Abra o arquivo **index.html** no seu navegador favorito e comece a jogar!✨
 
 ## 💡 Sobre o Projeto
-O O Desafio Simon foi criado como um projeto divertido para praticar habilidades em desenvolvimento front-end. Ele é um desafio proposto pelo curso The Complete 2024 Web Development Bootcamp feito pela Angela Yu. Além de ser um ótimo exercício para aprimorar lógica e memória, o jogo também é uma demonstração prática do uso de JavaScript para criar interatividade.
+O O Desafio Simon foi criado como um projeto divertido para praticar habilidades em desenvolvimento front-end. Ele é um desafio proposto pelo curso [The Complete 2024 Web Development Bootcamp](https://www.udemy.com/course/the-complete-web-development-bootcamp/) feito pela Angela Yu. Além de ser um ótimo exercício para aprimorar lógica e memória, o jogo também é uma demonstração prática do uso de JavaScript para criar interatividade.
